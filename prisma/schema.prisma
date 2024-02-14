@@ -14,3 +14,11 @@ model User {
   firstName  String?
   lastName  String?
 }
+
+model Todo {
+  id  Int @id @default(autoincrement())
+  title  String
+  description  String?
+  done  Boolean @default(false)
+  userId  Int
+}
